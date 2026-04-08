@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  cookbook:
+    build: .
+    container_name: openai-cookbook
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/app
+    environment:
+      - OPENAI_API_KEY=your_api_key_here
+    restart: always
